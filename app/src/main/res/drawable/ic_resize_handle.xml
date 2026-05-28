@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+
+    <!-- Three parallel diagonal lines — standard resize affordance -->
+    <path
+        android:pathData="M20,10 L10,20"
+        android:strokeColor="#4A4A65"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M24,13 L13,24"
+        android:strokeColor="#4A4A65"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M24,18 L18,24"
+        android:strokeColor="#4A4A65"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+
+</vector>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="canvas_bg">#0F0F12</color>
+    <color name="container_bg">#1A1A20</color>
+    <color name="toolbar_bg">#12121A</color>
+    <color name="fab_bg">#E8E4FF</color>
+    <color name="fab_icon">#1A1A20</color>
+    <color name="text_primary">#E8E4FF</color>
+    <color name="text_secondary">#6B6880</color>
+    <color name="btn_bg_normal">#2A2A38</color>
+    <color name="btn_icon_normal">#9E9AB8</color>
+    <color name="btn_bg_active">#3D3060</color>
+    <color name="btn_icon_active">#C4ABFF</color>
+    <color name="btn_icon_close">#7A5A5A</color>
+    <color name="interact_border">#7C5CFF</color>
+    <color name="resize_handle">#3A3A50</color>
+</resources>
