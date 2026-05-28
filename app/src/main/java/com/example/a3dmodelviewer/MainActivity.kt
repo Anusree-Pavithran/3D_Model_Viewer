@@ -99,12 +99,6 @@ class MainActivity : AppCompatActivity() {
 
         val sceneView = itemBinding.sceneView
         sceneView.lifecycle = lifecycle
-
-        /*
-         * Important:
-         * SceneView is SurfaceView based. SurfaceView has separate GPU surface.
-         * This helps selected card's surface move above others.
-         */
         sceneView.setZOrderMediaOverlay(true)
 
         val card = ModelCard(

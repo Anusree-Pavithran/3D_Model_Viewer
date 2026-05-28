@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Container hierarchy:
-    ┌──────────────────────────────────────┐
-    │  model name          [cube] [✕]      │  ← 44dp toolbar, drag handle
-    │  MOVE MODE  drag=move·pinch=resize   │  ← mode hint line (updates on toggle)
-    ├──────────────────────────────────────┤
-    │                                      │
-    │            SceneView                 │  ← 3D content
-    │                                      │
-    └──────────────────────────────────────┘
-                                      ◢    ← resize handle (hidden in 3D mode)
-
-    Two modes, always labelled so user never guesses:
-      MOVE MODE  → drag toolbar = move card,  pinch = resize card
-      3D MODE    → drag SceneView = rotate,   pinch = zoom model
--->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -29,14 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- SceneView fills everything below the toolbar (44dp) -->
         <io.github.sceneview.SceneView
             android:id="@+id/sceneView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="44dp" />
 
-        <!-- Toolbar: two-row layout so mode hint is always visible -->
         <LinearLayout
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -48,7 +30,6 @@
             android:paddingStart="10dp"
             android:paddingEnd="4dp">
 
-            <!-- Left side: model name + mode hint stacked vertically -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -67,13 +48,6 @@
                     android:singleLine="true"
                     android:ellipsize="end"
                     android:fontFamily="sans-serif-medium" />
-
-                <!--
-                    Mode hint — updated by applyInteractModeVisuals():
-                      MOVE MODE  → "drag=move · pinch=resize"
-                      3D MODE    → "drag=rotate · pinch=zoom"
-                    User always knows what their fingers will do.
-                -->
                 <TextView
                     android:id="@+id/tvModeHint"
                     android:layout_width="wrap_content"
@@ -88,11 +62,6 @@
 
             </LinearLayout>
 
-            <!--
-                Mode badge — shows current mode name.
-                "MOVE" (dim) or "3D" (purple accent).
-                Tapping it toggles mode — same as btnInteract.
-            -->
             <TextView
                 android:id="@+id/tvModeBadge"
                 android:layout_width="wrap_content"
@@ -108,7 +77,6 @@
                 android:background="@drawable/bg_mode_badge_normal"
                 android:fontFamily="sans-serif-medium" />
 
-            <!-- Cube icon — toggles interact mode -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnInteract"
                 style="@style/Widget.Material3.Button.IconButton"
@@ -126,7 +94,6 @@
                 app:iconPadding="0dp"
                 android:backgroundTint="@color/btn_bg_normal" />
 
-            <!-- Close button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnClose"
                 style="@style/Widget.Material3.Button.IconButton"
@@ -145,8 +112,7 @@
 
         </LinearLayout>
 
-        <!-- Interact-mode border — purple outline when in 3D mode -->
-        <View
+         <View
             android:id="@+id/interactBorder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

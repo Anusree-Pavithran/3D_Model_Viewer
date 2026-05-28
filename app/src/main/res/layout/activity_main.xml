@@ -7,13 +7,11 @@
     android:background="@color/canvas_bg"
     android:fitsSystemWindows="true">
 
-    <!-- Full-screen canvas where model containers are placed dynamically -->
     <FrameLayout
         android:id="@+id/modelCanvas"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Empty state shown when no models are added yet -->
     <LinearLayout
         android:id="@+id/emptyState"
         android:layout_width="wrap_content"
@@ -42,7 +40,6 @@
 
     </LinearLayout>
 
-    <!-- FAB — bottom-end, always on top -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddModel"
         android:layout_width="wrap_content"
