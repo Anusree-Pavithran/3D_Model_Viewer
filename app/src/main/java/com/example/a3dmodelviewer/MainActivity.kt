@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         ModelAsset("Computer", "models/computer.glb"),
         ModelAsset("Porsche 911", "models/porsche_911_turbo_996.glb"),
         ModelAsset("Theyyam", "models/theyyam_character.glb"),
+        ModelAsset("Cartoon", "models/cartoon.glb"),
+        ModelAsset("Donald Duck", "models/donald_duck.glb"),
 
     )
 
